@@ -1,0 +1,54 @@
+#!/bin/bash
+#SBATCH --partition=scu-cpu
+#SBATCH --time=48:00:00
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=128G
+#SBATCH --job-name=align_PAY42928_pass_combined_Virus_Treated_2_BMDM_hg38
+#SBATCH --output=/athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38/PAY42928_pass_combined_Virus_Treated_2_BMDM__hg38/%x.out
+
+# Tools
+MINIMAP2="/athena/masonlab/scratch/users/thn4005/programs/minimap2-2.28_x64-linux/minimap2"
+SAMTOOLS="/athena/masonlab/scratch/users/thn4005/programs/samtools-1.21/samtools"
+
+# Inputs
+FASTQ="/athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/fastq/PAY42928_pass_combined_Virus_Treated_2_BMDM.fastq.gz"
+REFERENCE="/athena/masonlab/scratch/users/thn4005/scripts/references_v2/references/human/hg38.fa"
+WORKDIR="/athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38/PAY42928_pass_combined_Virus_Treated_2_BMDM__hg38"
+THREADS=32
+
+# Outputs
+SAM="$WORKDIR/PAY42928_pass_combined_Virus_Treated_2_BMDM.sam"
+ALL_BAM="$WORKDIR/PAY42928_pass_combined_Virus_Treated_2_BMDM.all.bam"
+SORTED_ALL_BAM="$WORKDIR/PAY42928_pass_combined_Virus_Treated_2_BMDM.all.sorted.bam"
+ALIGNED_BAM="$WORKDIR/PAY42928_pass_combined_Virus_Treated_2_BMDM.aligned.sorted.bam"
+UNALIGNED_BAM="$WORKDIR/PAY42928_pass_combined_Virus_Treated_2_BMDM.unaligned.bam"
+STATS_ALL="$WORKDIR/PAY42928_pass_combined_Virus_Treated_2_BMDM.all.stats.txt"
+STATS_ALIGNED="$WORKDIR/PAY42928_pass_combined_Virus_Treated_2_BMDM.aligned.stats.txt"
+
+mkdir -p "$WORKDIR"
+cd "$WORKDIR"
+
+echo "[$(date)] Starting minimap2 alignment..." | tee -a run.log
+"$MINIMAP2" -ax map-ont -t "$THREADS" --secondary=no "$REFERENCE" "$FASTQ" > "$SAM"
+
+echo "[$(date)] Converting SAM to BAM..." | tee -a run.log
+"$SAMTOOLS" view -@ "$THREADS" -bS "$SAM" > "$ALL_BAM"
+
+echo "[$(date)] Sorting BAM..." | tee -a run.log
+"$SAMTOOLS" sort -@ "$THREADS" -o "$SORTED_ALL_BAM" "$ALL_BAM"
+"$SAMTOOLS" index "$SORTED_ALL_BAM"
+
+echo "[$(date)] Extracting aligned reads..." | tee -a run.log
+"$SAMTOOLS" view -@ "$THREADS" -b -F 4 "$SORTED_ALL_BAM" > "$ALIGNED_BAM"
+"$SAMTOOLS" index "$ALIGNED_BAM"
+
+echo "[$(date)] Extracting unaligned reads..." | tee -a run.log
+"$SAMTOOLS" view -@ "$THREADS" -b -f 4 "$SORTED_ALL_BAM" > "$UNALIGNED_BAM"
+
+echo "[$(date)] Computing stats..." | tee -a run.log
+"$SAMTOOLS" stats "$SORTED_ALL_BAM" > "$STATS_ALL"
+"$SAMTOOLS" stats "$ALIGNED_BAM" > "$STATS_ALIGNED"
+
+rm -f "$SAM" "$ALL_BAM"
+
+echo "[$(date)] Alignment complete for $FASTQ vs $REFERENCE" | tee -a run.log
