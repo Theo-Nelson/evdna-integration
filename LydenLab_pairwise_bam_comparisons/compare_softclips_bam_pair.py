@@ -110,30 +110,41 @@ with open(sam_out, "w") as samfile:
 print("=== Counting unaligned Virus soft-clips ===")
 read_alignment_status = defaultdict(lambda: False)
 
-with open(sam_out) as f:
-    for line in f:
-        if line.startswith("@"):
-            continue
-        fields = line.strip().split("\t")
-        read_name = fields[0]
-        flag = int(fields[1])
-        if not (flag & 0x4):
-            read_alignment_status[read_name] = True
-
 virus_read_names = set(record.id for record in SeqIO.parse(virus_fasta, "fasta"))
 total = len(virus_read_names)
-aligned = sum(1 for r in virus_read_names if read_alignment_status[r])
-unaligned = total - aligned
 
-summary_metrics.update({
-    "Virus_total_aligned_to_PBS": aligned,
-    "Virus_total_unaligned_to_PBS": unaligned,
-    "Virus_total_aligned_pct": round(aligned / total * 100, 2) if total > 0 else 0.0,
-    "Virus_total_unaligned_pct": round(unaligned / total * 100, 2) if total > 0 else 0.0
-})
+if total > 0:
+    with open(sam_out) as f:
+        for line in f:
+            if line.startswith("@"):
+                continue
+            fields = line.strip().split("\t")
+            read_name = fields[0]
+            flag = int(fields[1])
+            if not (flag & 0x4):
+                read_alignment_status[read_name] = True
 
-print(f"\n[✓] Virus soft-clips aligned to PBS: {aligned} / {total} mapped")
-print(f"[✓] Novel (unaligned) Virus soft-clips: {unaligned} / {total} ({unaligned / total:.2%})")
+    aligned = sum(1 for r in virus_read_names if read_alignment_status[r])
+    unaligned = total - aligned
+
+    summary_metrics.update({
+        "Virus_total_aligned_to_PBS": aligned,
+        "Virus_total_unaligned_to_PBS": unaligned,
+        "Virus_total_aligned_pct": round(aligned / total * 100, 2),
+        "Virus_total_unaligned_pct": round(unaligned / total * 100, 2)
+    })
+
+    print(f"\n[✓] Virus soft-clips aligned to PBS: {aligned} / {total} mapped")
+    print(f"[✓] Novel (unaligned) Virus soft-clips: {unaligned} / {total} ({unaligned / total:.2%})")
+else:
+    summary_metrics.update({
+        "Virus_total_aligned_to_PBS": 0,
+        "Virus_total_unaligned_to_PBS": 0,
+        "Virus_total_aligned_pct": 0.0,
+        "Virus_total_unaligned_pct": 0.0
+    })
+    print("\n[!] No virus soft-clips to align. Skipping alignment stats.")
+
 print("\nAnalysis complete.")
 
 # ------------------ Write Summary CSV ------------------

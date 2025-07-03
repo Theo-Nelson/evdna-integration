@@ -18,7 +18,8 @@ declare -A COMPARISONS=(
 )
 
 # Gene lists
-HUMAN_GENES=("HLA-DMB" "HLA-DQB2" "HLA-DRA" "HLA-DRB1" "TAP1")
+HUMAN_GENES=("HLA-DMB" "HLA-DQB2" "HLA-DRA" "HLA-DRB1" "TAP1" \
+             "HLA-DQA2" "HLA-DQB1" "HLA-B" "HLA-C" "HLA-F")
 MOUSE_GENES=("H2-Aa" "H2-Ab1" "H2-DMb1" "H2-Eb2" "H2-K1" "Tap1")
 
 # Activate environment

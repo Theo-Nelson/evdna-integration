@@ -5,9 +5,16 @@ PAY42928_pass_combined_Virus_Treated_2_BMDM_vs_combined_PBS_BMDM,H2-DMb1,5,141,0
 PAY42928_pass_combined_Virus_Treated_2_BMDM_vs_combined_PBS_BMDM,H2-Eb2,4,232,0.0172
 PAY42928_pass_combined_Virus_Treated_2_BMDM_vs_combined_PBS_BMDM,H2-K1,8,186,0.043
 PAY42928_pass_combined_Virus_Treated_2_BMDM_vs_combined_PBS_BMDM,Tap1,4,185,0.0216
+PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T,virus_ref_3,1437,7829,0.1835
+PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T,HLA-B,1,78,0.0128
+PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T,HLA-C,2,75,0.0267
+PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T,HLA-DMB,0,79,0
+PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T,HLA-DQA2,0,94,0
+PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T,HLA-DQB1,4,128,0.0312
 PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T,HLA-DQB2,6,81,0.0741
 PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T,HLA-DRA,2,52,0.0385
 PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T,HLA-DRB1,5,155,0.0323
+PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T,HLA-F,0,22,0
 PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T,TAP1,1,88,0.0114
 combined_EV_BMDM_vs_combined_PBS_BMDM,H2-Aa,5,135,0.037
 combined_EV_BMDM_vs_combined_PBS_BMDM,H2-Ab1,8,108,0.0741
