@@ -1,0 +1,5 @@
+FileType	OxfordNanopore_native	Read submission file type							
+sample	study	instrument_model	library_name	library_source	library_selection	library_strategy	file_name	file_md5	library_construction_protocol
+EV_Di-Ao_LydenLab_PBS_Control_Flow_Cell_1	PRJEB83979	PromethION	ATEV_DNA_PBS_10kb	GENOMIC	RANDOM	WGS	20250117_1830_1D_PAO91727_009e2c98_pod5.tar.gz	726f659ddc4403905bd4e36445876406	SQK-LSK114 gDNA Ligation Sequencing
+EV_Di-Ao_LydenLab_PBS_Control_Flow_Cell_2	PRJEB83979	PromethION	ATEV_DNA_PBS_1	GENOMIC	RANDOM	WGS	20250117_1831_1E_PAO31671_94350b17_pod5.tar.gz	b8c037381eab87861bbe41632ce30cf3	SQK-LSK114 gDNA Ligation Sequencing
+EV_Di-Ao_LydenLab_PBS_Control_Flow_Cell_3	PRJEB83979	PromethION	ATEV_DNA_PBS_2	GENOMIC	RANDOM	WGS	20250117_1831_1F_PAW86897_ace94668_pod5.tar.gz	078c6e34fce45b8849009ed4070c26ed	SQK-LSK114 gDNA Ligation Sequencing

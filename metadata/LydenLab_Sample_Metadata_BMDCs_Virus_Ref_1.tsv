@@ -1,0 +1,4 @@
+Checklist	ERC000011	ENA default sample checklist				
+tax_id	scientific_name	sample_alias	sample_title	sample_description	collection date	geographic location (country and/or sea)
+10090	Mus musculus	2025-26-01_ATEV_Virus	Virus Positive Control Sample	Virus Positive Control Sample / dendritic cells (DCs) genomic DNA isolated from BalbC mice	2024	not collected
+10090	Mus musculus	2025-26-01_ATEV_Virus-10kb	Virus Positive Control Sample	Virus Positive Control Sample / dendritic cells (DCs) genomic DNA isolated from BalbC mice	2024	not collected

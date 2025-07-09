@@ -1,0 +1,5 @@
+Checklist	ERC000011	ENA default sample checklist				
+tax_id	scientific_name	sample_alias	sample_title	sample_description	collection date	geographic location (country and/or sea)
+10090	Mus musculus	EV_Di-Ao_LydenLab_PBS_Control_Flow_Cell_1	PBS Sample	Three flow cells were run with material from the same sample	2024	not collected
+10090	Mus musculus	EV_Di-Ao_LydenLab_PBS_Control_Flow_Cell_2	PBS Sample	Three flow cells were run with material from the same sample	2024	not collected
+10090	Mus musculus	EV_Di-Ao_LydenLab_PBS_Control_Flow_Cell_3	PBS Sample	Three flow cells were run with material from the same sample	2024	not collected

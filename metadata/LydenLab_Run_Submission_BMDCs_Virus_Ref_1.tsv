@@ -1,0 +1,4 @@
+FileType	OxfordNanopore_native	Read submission file type							
+sample	study	instrument_model	library_name	library_source	library_selection	library_strategy	file_name	file_md5	library_construction_protocol
+ERS23388691	PRJEB83979	PromethION	2025-26-01_ATEV_Virus_20250126_1750_2B_PAO33840_271bf6e8	GENOMIC	RANDOM	WGS	20250126_1750_2B_PAO33840_271bf6e8_pod5.tar.gz	00d71a153ddcb112333d8afc1f37e074	SQK-LSK114 gDNA Ligation Sequencing
+ERS23388692	PRJEB83979	PromethION	2025-26-01_ATEV_Virus-10kb_20250126_1749_2A_PAO26472_bd4fabd4	GENOMIC	RANDOM	WGS	20250126_1749_2A_PAO26472_bd4fabd4_pod5.tar.gz	0bfcb32fdf72aa23ca45150e66b280c5	SQK-LSK114 gDNA Ligation Sequencing
