@@ -13,14 +13,14 @@ This dataset involves multiple experimental conditions across different cell typ
 | ATEV (EV-treated)     | Jan 8th, 2025    | ERR14106287, ERR14106288                | Two technical replicate flowcells |
 | PBS (control)         | Jan 24th, 2025   | ERR14208048, ERR14208049, ERR14208050   | Three technical replicate flowcells |
 | Virus Ref 1           | Feb 16th, 2025   | ERR14376133, ERR14376134                | Two technical replicate flowcells |
+| Virus Ref 2           | Jul 9, 2025   | ERR15277392                | One technical replicate flowcells |
 
-### 9th July 2025 Samples
+### 293T Samples
 
 | Run Accession | Sample Description                |
 |---------------|-----------------------------------|
 | ERR15277390   | HEK293T treated with PBS          |
 | ERR15277391   | HEK293T treated with virus_ref_3  |
-| ERR15277392   | BMDCs treated with virus_ref_2    |
 
 ---
 
@@ -28,16 +28,16 @@ This dataset involves multiple experimental conditions across different cell typ
 
 ```bash
 ev-integration/
-├── FIGURE_S25B/                        # Placeholder or figure outputs
+├── FIGURE_S25B/                        # key scripts for figure generation
 ├── FIGURE_S25C/
 ├── LydenLab_alignment_scripts/        # SBATCH scripts for alignment to various references
 ├── LydenLab_pairwise_bam_comparisons/ # Scripts to compare soft-clipped reads across BAMs
-├── LydenLab_subset_alignment_scripts/ # Subset-specific alignment jobs
-├── metadata/                          # Submission/sample metadata for all BMDC conditions
-├── references/                        # Contains viral reference sequences (LydenLab_Virus_Ref)
+├── LydenLab_subset_alignment_scripts/ # Gene Subset-specific alignment jobs
+├── metadata/                          # Submission/sample metadata / spreadsheets for all samples
+├── references/                        # Contains viral reference sequences (LydenLab_Virus_Ref 1,2,3)
 ```
 
-### 🔧 `LydenLab_alignment_scripts/`
+### Key Script: `LydenLab_alignment_scripts/`
 
 Includes pre-written `sbatch` scripts to align combined sample FASTQs against:
 - **hg38**: Human genome (UCSC)
@@ -54,7 +54,7 @@ align_combined_PBS_BMDM_virus_ref_1.sbatch
 
 These use `minimap2` and `samtools` to produce sorted, indexed BAMs and alignment stats.
 
-### 🧪 `LydenLab_pairwise_bam_comparisons/`
+### Key Script: `LydenLab_pairwise_bam_comparisons/`
 
 Scripts for pairwise BAM analysis focused on **soft-clipped read behavior**:
 - `compare_softclips_bam_pair.py`: Compares soft-clip retention and re-alignment of virus-treated reads vs PBS.
@@ -89,4 +89,4 @@ If you use this repository or data in your work, please cite the originating stu
 
 ---
 
-For questions or collaboration, contact **Theo Nelson**.
+For questions, contact **Theo Nelson** (thn4005@med.cornell.edu).
