@@ -1,0 +1,5 @@
+FileType	OxfordNanopore_native	Read submission file type							
+sample	study	instrument_model	library_name	library_source	library_selection	library_strategy	file_name	file_md5	library_construction_protocol
+ERS25199609	PRJEB83979	PromethION	20250530_1228_1C_PAY39146_f081ebc7_pod5	GENOMIC	RANDOM	WGS	20250530_1228_1C_PAY39146_f081ebc7_pod5.tar.gz	b19dc069a4daf676c77f29faa015f9e0	SQK-LSK114 gDNA Ligation Sequencing
+ERS25199610	PRJEB83979	PromethION	20250530_1229_1D_PAY43290_3d78b529_pod5	GENOMIC	RANDOM	WGS	20250530_1229_1D_PAY43290_3d78b529_pod5.tar.gz	e7d6c755d9fd0070654214714dc55d06	SQK-LSK114 gDNA Ligation Sequencing
+ERS25199608	PRJEB83979	PromethION	20250221_1400_3C_PAY42928_2b057b0c_pod5	GENOMIC	RANDOM	WGS	20250221_1400_3C_PAY42928_2b057b0c_pod5.tar.gz	2d6b39472e9d6f057fb385adbfc1be60	SQK-LSK114 gDNA Ligation Sequencing

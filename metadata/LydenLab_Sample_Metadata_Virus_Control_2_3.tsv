@@ -1,0 +1,5 @@
+Checklist	ERC000011	ENA default sample checklist				
+tax_id	scientific_name	sample_alias	sample_title	sample_description	collection date	geographic location (country and/or sea)
+10090	Mus musculus	LydenLab_BMDC_1	Virus Positive Control Sample (Virus Reference 2)	Virus Positive Control Sample / dendritic cells (DCs) genomic DNA isolated from BalbC mice (with virus reference #2)	2025	not collected
+9606	Homo sapiens	2025-05-30_DiAo_293T_PBS	PBS Treated Negative Control (293T Cells)	Genomic DNA from PBS-Treated HEK293T Cells	2025	not collected
+9606	Homo sapiens	2025-05-30_DiAo_293T_Virus	Virus Positive Control Sample (293T Cells; Virus Reference 3)	Virus Positive Control Sample Genomic DNA HEK293T (with virus reference #3)	2025	not collected
