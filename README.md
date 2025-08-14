@@ -2,10 +2,10 @@
 
 This repository contains alignment scripts, metadata, and soft-clip comparison tools associated with the ENA study accession **ERP167546**, focused on extracellular vesicle (EV) interactions and viral responses in BMDCs and HEK293T cells.
 
+**Figure 1. Workflow for EV Integration Analysis in LydenLab Repository.**  
 ![LydenLab_FlowChart_GitHub](LydenLab_FlowChart_GitHub.png)
 
-**Figure 1. Workflow for EV Integration Analysis in LydenLab Repository.**  
-This flow chart outlines the processing steps used in the EV integration pipeline. Starting from combined FASTQ files, reads are aligned to reference genomes or viral sequences using **Alignment Scripts**. BAM files are then subset to genes of interest (**Subset Alignments**). Soft-clipped bases are extracted from these BAMs (**Extract Soft Clipped Bases**) and aligned between experimental and control samples (**Align Soft Clips B/t Samples**). Finally, the percentage of unique soft-clipped reads per comparison is calculated and exported as CSV results (**Analyze % of Unique Soft-Clips per Comparison**).
+Caption: This flow chart outlines the processing steps used in the EV integration pipeline. Starting from combined FASTQ files, reads are aligned to reference genomes or viral sequences using **Alignment Scripts**. BAM files are then subset to genes of interest (**Subset Alignments**). Soft-clipped bases are extracted from these BAMs (**Extract Soft Clipped Bases**) and aligned between experimental and control samples (**Align Soft Clips B/t Samples**). Finally, the percentage of unique soft-clipped reads per comparison is calculated and exported as CSV results (**Analyze % of Unique Soft-Clips per Comparison**).
 
 ## 🔬 Experimental Overview
 
