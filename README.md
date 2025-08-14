@@ -37,6 +37,10 @@ ev-integration/
 ├── references/                        # Contains viral reference sequences (LydenLab_Virus_Ref 1,2,3)
 ```
 
+### Methods & Versioning
+
+DNA Libraries were prepared with the SQK-LSK114 gDNA Ligation Sequencing Kit and sequenced with FLO-PRO114M flow cells (Oxford Nanopore Technologies). Real-time basecalled reads were produced with MinKNOW Version 24.06.15 and aligned separately with minimap2 v2.28 to the UCSC hg38 reference genome (10.1101/gr.159624.113), UCSC mm10 reference genome and viral vector (LentiGuide-GFP.fa for BMDCs, Addgene# 200961 for the 293T cells). Selected gene coordinates were queried the UCSC genome browser (https://genome.ucsc.edu/cgi-bin/hgGateway). Reads associated with these genes were extracted with samtools v1.21. pysam v0.22.1 was used to extract left and right soft-clipped ends. Soft-clipped ends greater than or equal to 50 bp from either ATEVs or viral vector conditions were aligned to soft-clipped ends from the PBS condition with minimap2 v2.28. The ratio between the number of unaligned soft-clipped ends and total DNA count was then calculated to score gene integration.
+
 ### Key Script: `LydenLab_alignment_scripts/`
 
 Includes pre-written `sbatch` scripts to align combined sample FASTQs against:
