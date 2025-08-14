@@ -52,49 +52,124 @@ ev-integration/
 
 DNA Libraries were prepared with the SQK-LSK114 gDNA Ligation Sequencing Kit and sequenced with FLO-PRO114M flow cells (Oxford Nanopore Technologies). Real-time basecalled reads were produced with MinKNOW Version 24.06.15 and aligned separately with minimap2 v2.28 to the UCSC hg38 reference genome (10.1101/gr.159624.113), UCSC mm10 reference genome and viral vector (LentiGuide-GFP.fa for BMDCs, Addgene# 200961 for the 293T cells). Selected gene coordinates were queried the UCSC genome browser (https://genome.ucsc.edu/cgi-bin/hgGateway). Reads associated with these genes were extracted with samtools v1.21. pysam v0.22.1 was used to extract left and right soft-clipped ends. Soft-clipped ends greater than or equal to 50 bp from either ATEVs or viral vector conditions were aligned to soft-clipped ends from the PBS condition with minimap2 v2.28. The ratio between the number of unaligned soft-clipped ends and total DNA count was then calculated to score gene integration.
 
-### Key Script: `LydenLab_alignment_scripts/`
+### Repository Contents & Key Resources
 
-Includes pre-written `sbatch` scripts to align combined sample FASTQs against:
-- **hg38**: Human genome (UCSC)
-- **mm10**: Mouse genome (UCSC)
-- **virus_ref_1`, `virus_ref_2`, `virus_ref_3**: Viral reference sequences
-
-Each condition has multiple alignment targets:
-```bash
-align_combined_PBS_BMDM_hg38.sbatch
-align_combined_PBS_BMDM_mm10.sbatch
-align_combined_PBS_BMDM_virus_ref_1.sbatch
-...
-```
-
-These use `minimap2` and `samtools` to produce sorted, indexed BAMs and alignment stats.
-
-### Key Script: `LydenLab_pairwise_bam_comparisons/`
-
-Scripts for pairwise BAM analysis focused on **soft-clipped read behavior**:
-- `compare_softclips_bam_pair.py`: Compares soft-clip retention and re-alignment of virus-treated reads vs PBS.
-- `summarize_softclip_unaligned_fraction.py`: Summarizes fraction of unaligned reads.
-- `run_softclip_comparisons_sequential_V2.sh`: Sequential runner for comparisons.
+The repository is organized into directories for figure generation, alignment scripts, BAM comparison utilities, subset alignments, metadata, and references. Below is a detailed breakdown.
 
 ---
 
-## 🧬 References
+#### `FIGURE_S25B/`  
+Contains data files and scripts used to generate Supplementary Figure S25B.
 
-The references used in alignment (hg38, mm10) were obtained from the **UCSC Genome Browser**. Viral references are located under:
-
-```
-references/LydenLab_Virus_Ref/
-```
+- **LydenLab_EV_comparison_summary_softclip_unaligned_fraction.csv**  
+  CSV summarizing the fraction of unaligned soft-clipped reads for EV vs. PBS comparisons across targeted genes.
 
 ---
 
-## 📎 Metadata Files
+#### `FIGURE_S25C/`  
+Contains plotting scripts used to generate Supplementary Figure S25C.
 
-All ENA metadata (run accessions, dates, replicates) are found under `metadata/`, e.g.:
+- **plot_softclip_ecdf.py**  
+  Python script to generate ECDF (Empirical Cumulative Distribution Function) plots of soft-clip read lengths or qualities across experimental conditions.
 
-- `LydenLab_Run_Submission_BMDCs_EV_Treatment.txt`
-- `LydenLab_Sample_Metadata_BMDCs_PBS_Treatment.tsv`
-- etc.
+---
+
+#### `gene_pairwise_bam_comparisons/`  
+Holds outputs from gene-specific pairwise BAM comparisons. Each subfolder corresponds to a gene of interest, containing intermediate and final results.
+
+- **Example subfolder: `combined_EV_BMDM_vs_combined_PBS_BMDM/H2-Aa/`**  
+  - `PBS.softclips.fasta` — FASTA of soft-clipped PBS reads for the gene.  
+  - `PBS.softclips.mmi` — Minimap2 index for PBS softclips.  
+  - `pbs.subsampled.bam` / `.bai` — Subsampled PBS BAM for this gene.  
+  - `virus.subsampled.bam` / `.bai` — Subsampled BAM for EV/virus condition.  
+  - `Virus_vs_PBS.sam` — Alignment of virus-treated softclips to PBS softclips.  
+  - `softclip_summary.csv` — Summary of match/mismatch and alignment metrics.  
+  - `softclip_combined_EV_BMDM_vs_combined_PBS_BMDM_H2-Aa.out` — Raw minimap2 alignment output for the comparison.
+
+- **Gene targets include**:  
+  `H2-Aa`, `H2-Ab1`, `H2-DMb1`, `H2-Eb2`, `H2-K1`, `Tap1`  
+  for mouse MHC genes, with analogous human HLA/TAP targets in other folders.
+
+---
+
+#### `gene_subsets_bam_bai/`  
+Contains sorted and indexed BAM files for targeted alignments to specific genes. Filenames indicate:  
+
+- **Sample Name** (e.g., `combined_EV_BMDM`)  
+- **Species** (`human` or `mouse`)  
+- **Gene** (e.g., `HLA-B`, `H2-Aa`)  
+
+Example:  
+- `combined_EV_BMDM.all.sorted_mouse_H2-Aa.bam`  
+- `combined_EV_BMDM.all.sorted_mouse_H2-Aa.bam.bai`  
+
+These files allow focused analysis on loci of interest without processing whole-genome BAMs.
+
+---
+
+#### `LydenLab_alignment_scripts/`  
+Pre-written SLURM `sbatch` scripts for aligning combined sample FASTQs against multiple references using minimap2.
+
+- **Naming convention**:  
+  `align_<sample>_<reference>.sbatch`  
+  where `<reference>` is `hg38`, `mm10`, or one of the three viral references (`virus_ref_1`, `virus_ref_2`, `virus_ref_3`).
+
+- **Example scripts**:  
+  - `align_combined_EV_BMDM_hg38.sbatch` — Align EV-treated BMDM to human genome.  
+  - `align_PAY43290_combined_Virus_293T_virus_ref_3.sbatch` — Align HEK293T virus sample to virus reference 3.
+
+These scripts produce sorted, indexed BAMs along with alignment statistics.
+
+---
+
+#### `LydenLab_pairwise_bam_comparisons/`  
+Scripts for pairwise BAM analysis focused on **soft-clipped read behavior**.
+
+- `compare_softclips_bam_pair.py` — Compares soft-clip retention and re-alignment between virus-treated (or EV-treated) reads and PBS controls.  
+- `summarize_softclip_unaligned_fraction.py` — Summarizes the fraction of unaligned reads for each comparison.  
+- `run_softclip_comparisons_sequential_V2.sh` — Batch runner for multiple pairwise comparisons.
+
+---
+
+#### `LydenLab_subset_alignment_scripts/`  
+Scripts to align only reads mapping to selected gene subsets.
+
+- **subset_alignments_by_gene_V2.sh** — Extracts reads for a set of target genes from full BAMs, then aligns them to relevant references.
+
+---
+
+#### `metadata/`  
+Contains ENA submission and sample metadata files for all experiments.
+
+- **Run Submission Files**:  
+  - `LydenLab_Run_Submission_BMDCs_EV_Treatment.tsv` — Accession IDs and submission details for BMDC EV-treated samples.  
+  - `LydenLab_Run_Submission_fastq.tsv` — Metadata for combined FASTQ uploads.  
+
+- **Sample Metadata Files**:  
+  - `LydenLab_Sample_Metadata_BMDCs_PBS_Treatment.tsv` — PBS control sample details.  
+  - `LydenLab_Sample_Metadata_Virus_Control_2_3.tsv` — Virus control (references 2 & 3) sample info.
+
+---
+
+#### `references/`  
+Contains reference FASTA files for viral vectors.
+
+- **LydenLab_Virus_Ref/** — Three separate viral reference genomes:  
+  - `virus_ref_1.fa`  
+  - `virus_ref_2.fa`  
+  - `virus_ref_3.fa`  
+
+These are used for targeted alignments and soft-clip mapping.
+
+---
+
+### Analysis Workflow Overview
+
+1. **Align combined FASTQs** to the chosen reference genome or viral sequence using scripts in `LydenLab_alignment_scripts/`.
+2. **Subset alignments** by gene (if needed) using `LydenLab_subset_alignment_scripts/`.
+3. **Perform pairwise BAM comparisons** with PBS controls using `LydenLab_pairwise_bam_comparisons/`.
+4. **Generate summaries and figures** using `FIGURE_S25B/` and `FIGURE_S25C/` scripts.
+5. **Interpret results** using metadata in `metadata/` for experimental context.
 
 ---
 
