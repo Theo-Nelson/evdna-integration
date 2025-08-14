@@ -1,0 +1,34 @@
+[M::mm_idx_gen::0.003*1.50] collected minimizers
+[M::mm_idx_gen::0.004*1.79] sorted minimizers
+[M::main::0.018*0.41] loaded/built the index for 2 target sequence(s)
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 2
+[M::mm_idx_stat::0.018*0.42] distinct minimizers: 7782 (98.32% are singletons); average occurrences: 1.020; average spacing: 5.355; total length: 42495
+[M::main] Version: 2.28-r1209
+[M::main] CMD: /athena/masonlab/scratch/users/thn4005/programs/minimap2-2.28_x64-linux/minimap2 -d /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T/HLA-DMB/PBS.softclips.mmi /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T/HLA-DMB/PBS.softclips.fasta
+[M::main] Real time: 0.019 sec; CPU: 0.008 sec; Peak RSS: 0.051 GB
+[M::main::0.002*1.22] loaded/built the index for 2 target sequence(s)
+[M::mm_mapopt_update::0.002*1.19] mid_occ = 10
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 2
+[M::mm_idx_stat::0.002*1.17] distinct minimizers: 7782 (98.32% are singletons); average occurrences: 1.020; average spacing: 5.355; total length: 42495
+[M::main] Version: 2.28-r1209
+[M::main] CMD: /athena/masonlab/scratch/users/thn4005/programs/minimap2-2.28_x64-linux/minimap2 -ax map-ont -t 8 /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T/HLA-DMB/PBS.softclips.mmi /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T/HLA-DMB/Virus.softclips.fasta
+[M::main] Real time: 0.004 sec; CPU: 0.004 sec; Peak RSS: 0.051 GB
+
+=== Extracting PBS soft-clips ===
+[✓] Wrote 2 sequences to /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T/HLA-DMB/PBS.softclips.fasta
+[QC] 2 kept, 44 filtered (<50 bp)
+
+=== Extracting Virus soft-clips ===
+[✓] Wrote 0 sequences to /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T/HLA-DMB/Virus.softclips.fasta
+[QC] 0 kept, 79 filtered (<50 bp)
+
+=== Building minimap2 index: /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T/HLA-DMB/PBS.softclips.mmi ===
+=== Aligning Virus soft-clips to PBS soft-clips ===
+=== Counting unaligned Virus soft-clips ===
+
+[✓] Virus soft-clips aligned to PBS: 0 / 0 mapped
+Traceback (most recent call last):
+  File "/athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/scripts/compare_softclips_bam_pair.py", line 136, in <module>
+    print(f"[✓] Novel (unaligned) Virus soft-clips: {unaligned} / {total} ({unaligned / total:.2%})")
+                                                                            ~~~~~~~~~~^~~~~~~
+ZeroDivisionError: division by zero

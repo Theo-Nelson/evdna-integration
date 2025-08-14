@@ -1,0 +1,11 @@
+Metric,Value
+PBS_total_pre_filter,162
+PBS_retained,15
+PBS_filtered,147
+Virus_total_pre_filter,141
+Virus_retained,7
+Virus_filtered,134
+Virus_total_aligned_to_PBS,2
+Virus_total_unaligned_to_PBS,5
+Virus_total_aligned_pct,28.57
+Virus_total_unaligned_pct,71.43

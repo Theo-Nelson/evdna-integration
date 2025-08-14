@@ -1,0 +1,7 @@
+@HD	VN:1.6	SO:unsorted	GO:query
+@SQ	SN:94a0a135-d86b-4a44-9f77-cf5994665228_right	LN:157
+@SQ	SN:4eaa1da0-eeaf-43f1-85ff-c2a271914e8d_right	LN:48888
+@SQ	SN:b073b18e-c1bc-46b6-86d1-167276b20559_right	LN:138
+@PG	ID:minimap2	PN:minimap2	VN:2.28-r1209	CL:minimap2 -ax map-ont -t 8 /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T/HLA-C/PBS.softclips.mmi /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T/HLA-C/Virus.softclips.fasta
+07d2a2a1-d4df-446c-802b-6f72abe45535_right	4	*	0	0	*	*	0	0	AATACGTAACTGAACCAAGTAAAATACAAAAAAAACAACTGAACCAAGTACATGACAT	*	rl:i:0
+4244a624-748e-4abe-9321-c67a364666ab_left	4	*	0	0	*	*	0	0	TGTTGCTGTCTTGCCATGCCATGTTTTGCCTTCGTTCAGTTACGTATTGCT	*	rl:i:0

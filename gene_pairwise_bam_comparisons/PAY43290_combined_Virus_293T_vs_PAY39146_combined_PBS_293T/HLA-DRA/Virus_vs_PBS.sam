@@ -1,0 +1,12 @@
+@HD	VN:1.6	SO:unsorted	GO:query
+@SQ	SN:b1e2bff6-bd52-44f3-bf73-21adc6bcda5e_left	LN:56
+@SQ	SN:d167b396-6e7d-4fab-a059-e3ff31c18a94_left	LN:501
+@PG	ID:minimap2	PN:minimap2	VN:2.28-r1209	CL:minimap2 -ax map-ont -t 8 /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T/HLA-DRA/PBS.softclips.mmi /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY43290_combined_Virus_293T_vs_PAY39146_combined_PBS_293T/HLA-DRA/Virus.softclips.fasta
+7f0ebc2a-bcaa-4679-affd-950d027df471_right	4	*	0	0	*	*	0	0	AGCAATACGTAATCTAACGAGTACAGGAAAAAAAAAAAAAAAAATTATGCCAAGTAATATGTATATAACA	*	rl:i:0
+b0fc29f6-5cca-40f6-9cf3-645e56940a97_left	0	d167b396-6e7d-4fab-a059-e3ff31c18a94_left	315	3	24S70M40S	*	0	0	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATTTTTTTTTTTTTAAATCATTTTTTTTTTTTTGTTCAATG	*	NM:i:0	ms:i:140	AS:i:92	nn:i:0	tp:A:P	cm:i:55	s1:i:70	s2:i:69	de:f:0	SA:Z:d167b396-6e7d-4fab-a059-e3ff31c18a94_left,316,+,69M65S,49,0;	rl:i:0
+b0fc29f6-5cca-40f6-9cf3-645e56940a97_left	2048	d167b396-6e7d-4fab-a059-e3ff31c18a94_left	316	49	69M65H	*	0	0	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	*	NM:i:0	ms:i:138	AS:i:138	nn:i:0	tp:A:P	cm:i:54	s1:i:69	s2:i:0	de:f:0	SA:Z:d167b396-6e7d-4fab-a059-e3ff31c18a94_left,315,+,24S70M40S,3,0;	rl:i:0
+b0fc29f6-5cca-40f6-9cf3-645e56940a97_left	256	d167b396-6e7d-4fab-a059-e3ff31c18a94_left	317	0	68M66S	*	0	0	*	*	NM:i:0	ms:i:136	AS:i:136	nn:i:0	tp:A:S	cm:i:53	s1:i:68	de:f:0	rl:i:0
+b0fc29f6-5cca-40f6-9cf3-645e56940a97_left	256	d167b396-6e7d-4fab-a059-e3ff31c18a94_left	318	0	67M67S	*	0	0	*	*	NM:i:0	ms:i:134	AS:i:134	nn:i:0	tp:A:S	cm:i:52	s1:i:67	de:f:0	rl:i:0
+b0fc29f6-5cca-40f6-9cf3-645e56940a97_left	256	d167b396-6e7d-4fab-a059-e3ff31c18a94_left	319	0	66M68S	*	0	0	*	*	NM:i:0	ms:i:132	AS:i:132	nn:i:0	tp:A:S	cm:i:51	s1:i:66	de:f:0	rl:i:0
+b0fc29f6-5cca-40f6-9cf3-645e56940a97_left	256	d167b396-6e7d-4fab-a059-e3ff31c18a94_left	320	0	65M69S	*	0	0	*	*	NM:i:0	ms:i:130	AS:i:130	nn:i:0	tp:A:S	cm:i:50	s1:i:65	de:f:0	rl:i:0
+130708b3-906a-4ca9-8d17-8f8773131f50_left	4	*	0	0	*	*	0	0	TCTCTCTGTGTGTGTGTGTGTGTGTGTGTGTGTTTATGTCATCCTTCCCTTGGTTACAGTTGGTATTACTACTGTTC	*	rl:i:0

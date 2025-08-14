@@ -1,0 +1,34 @@
+[M::mm_idx_gen::0.005*0.79] collected minimizers
+[M::mm_idx_gen::0.006*1.09] sorted minimizers
+[M::main::0.083*0.10] loaded/built the index for 44 target sequence(s)
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 44
+[M::mm_idx_stat::0.084*0.10] distinct minimizers: 4533 (54.05% are singletons); average occurrences: 2.174; average spacing: 5.185; total length: 51097
+[M::main] Version: 2.28-r1209
+[M::main] CMD: /athena/masonlab/scratch/users/thn4005/programs/minimap2-2.28_x64-linux/minimap2 -d /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY42928_pass_combined_Virus_Treated_2_BMDM_vs_combined_PBS_BMDM/H2-Ab1/PBS.softclips.mmi /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY42928_pass_combined_Virus_Treated_2_BMDM_vs_combined_PBS_BMDM/H2-Ab1/PBS.softclips.fasta
+[M::main] Real time: 0.084 sec; CPU: 0.009 sec; Peak RSS: 0.052 GB
+[M::main::0.002*1.18] loaded/built the index for 44 target sequence(s)
+[M::mm_mapopt_update::0.002*1.16] mid_occ = 281
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 44
+[M::mm_idx_stat::0.002*1.14] distinct minimizers: 4533 (54.05% are singletons); average occurrences: 2.174; average spacing: 5.185; total length: 51097
+[M::worker_pipeline::0.012*4.12] mapped 17 sequences
+[M::main] Version: 2.28-r1209
+[M::main] CMD: /athena/masonlab/scratch/users/thn4005/programs/minimap2-2.28_x64-linux/minimap2 -ax map-ont -t 8 /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY42928_pass_combined_Virus_Treated_2_BMDM_vs_combined_PBS_BMDM/H2-Ab1/PBS.softclips.mmi /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY42928_pass_combined_Virus_Treated_2_BMDM_vs_combined_PBS_BMDM/H2-Ab1/Virus.softclips.fasta
+[M::main] Real time: 0.013 sec; CPU: 0.050 sec; Peak RSS: 0.052 GB
+
+=== Extracting PBS soft-clips ===
+[✓] Wrote 44 sequences to /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY42928_pass_combined_Virus_Treated_2_BMDM_vs_combined_PBS_BMDM/H2-Ab1/PBS.softclips.fasta
+[QC] 44 kept, 126 filtered (<50 bp)
+
+=== Extracting Virus soft-clips ===
+[✓] Wrote 17 sequences to /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY42928_pass_combined_Virus_Treated_2_BMDM_vs_combined_PBS_BMDM/H2-Ab1/Virus.softclips.fasta
+[QC] 17 kept, 54 filtered (<50 bp)
+
+=== Building minimap2 index: /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY42928_pass_combined_Virus_Treated_2_BMDM_vs_combined_PBS_BMDM/H2-Ab1/PBS.softclips.mmi ===
+=== Aligning Virus soft-clips to PBS soft-clips ===
+=== Counting unaligned Virus soft-clips ===
+
+[✓] Virus soft-clips aligned to PBS: 16 / 17 mapped
+[✓] Novel (unaligned) Virus soft-clips: 1 / 17 (5.88%)
+
+Analysis complete.
+[📄] Summary CSV written to: /athena/masonlab/scratch/users/thn4005/scripts/projects_v2/Di-Ao/brand_new_analysis/alignments_mm10_hg38_subset_comparisons/PAY42928_pass_combined_Virus_Treated_2_BMDM_vs_combined_PBS_BMDM/H2-Ab1/softclip_summary.csv
