@@ -1,0 +1,8 @@
+FileType	fastq	Read submission file type							
+sample	study	instrument_model	library_name	library_source	library_selection	library_strategy	file_name	file_md5	library_construction_protocol
+ERS25505669	PRJEB83979	PromethION	Virus Positive Control Sample (Virus Reference 2)	GENOMIC	RANDOM	WGS	PAY42928_pass_combined_Virus_Treated_2_BMDM.fastq.gz	be65cbfef13c492faa7a189ea63a7ef7	SQK-LSK114 gDNA Ligation Sequencing
+ERS25505670	PRJEB83979	PromethION	Virus Positive Control Sample (Virus Reference 1)	GENOMIC	RANDOM	WGS	combined_Virus_Treated_1_BMDM.fastq.gz	1caa07569677dc10dc947bf70d9265cc	SQK-LSK114 gDNA Ligation Sequencing
+ERS25505671	PRJEB83979	PromethION	EV-B Sample	GENOMIC	RANDOM	WGS	combined_EV_BMDM.fastq.gz	247bf95baf6133abdce851f6bb408362	SQK-LSK114 gDNA Ligation Sequencing
+ERS25505672	PRJEB83979	PromethION	PBS Sample	GENOMIC	RANDOM	WGS	combined_PBS_BMDM.fastq.gz	80feb66b55d07fb0616a15c2c4fa5589	SQK-LSK114 gDNA Ligation Sequencing
+ERS25505673	PRJEB83979	PromethION	PBS Treated Negative Control (293T Cells)	GENOMIC	RANDOM	WGS	PAY39146_combined_PBS_293T.fastq.gz	44c8c075ba478762473c46d1ce2cfdc9	SQK-LSK114 gDNA Ligation Sequencing
+ERS25505674	PRJEB83979	PromethION	Virus Positive Control Sample (293T Cells; Virus Reference 3)	GENOMIC	RANDOM	WGS	PAY43290_combined_Virus_293T.fastq.gz	c7afa5c4506ec3c2269a8bf599d6331d	SQK-LSK114 gDNA Ligation Sequencing

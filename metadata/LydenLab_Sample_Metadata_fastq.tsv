@@ -1,0 +1,8 @@
+Checklist	ERC000011	ENA default sample checklist				
+tax_id	scientific_name	sample_alias	sample_title	sample_description	collection date	geographic location (country and/or sea)
+10090	Mus musculus	PAY42928_pass_combined_Virus_Treated_2_BMDM.fastq.gz	Virus Positive Control Sample (Virus Reference 2)	Virus Positive Control Sample / dendritic cells (DCs) genomic DNA isolated from BalbC mice (with virus reference #2)	2025	not collected
+10090	Mus musculus	combined_Virus_Treated_1_BMDM.fastq.gz	Virus Positive Control Sample	Virus Positive Control Sample / dendritic cells (DCs) genomic DNA isolated from BalbC mice (with virus reference #1)	2024	not collected
+10090	Mus musculus	combined_EV_BMDM.fastq.gz	EV-B Sample	Activated T-Cell Extracellular Vesicle Treated Sample / dendritic cells (DCs) genomic DNA isolated from BalbC mice	2024	not collected
+10090	Mus musculus	combined_PBS_BMDM.fastq.gz	PBS Sample	PBS-Treated Sample / dendritic cells (DCs) genomic DNA isolated from BalbC mice	2024	not collected
+9606	Homo sapiens	PAY39146_combined_PBS_293T.fastq.gz	PBS Treated Negative Control (293T Cells)	Genomic DNA from PBS-Treated HEK293T Cells	2025	not collected
+9606	Homo sapiens	PAY43290_combined_Virus_293T.fastq.gz	Virus Positive Control Sample (293T Cells; Virus Reference 3)	Virus Positive Control Sample Genomic DNA HEK293T (with virus reference #3)	2025	not collected
