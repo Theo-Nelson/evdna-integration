@@ -6,7 +6,7 @@ This repository contains alignment scripts, metadata, and soft-clip comparison t
 
 This dataset involves multiple experimental conditions across different cell types and treatment protocols. The overall ENA study accession is **ERP167546**.
 
-### BMDCs Experiments
+### BMDCs Experiments [pod5]
 
 | Treatment             | Submission Date | Run Accessions                          | Notes                             |
 |----------------------|------------------|-----------------------------------------|-----------------------------------|
@@ -15,12 +15,23 @@ This dataset involves multiple experimental conditions across different cell typ
 | Virus Ref 1           | Feb 16th, 2025   | ERR14376133, ERR14376134                | Two technical replicate flowcells |
 | Virus Ref 2           | Jul 9, 2025   | ERR15277392                | One technical replicate flowcells |
 
-### 293T Samples
+### 293T Samples [pod5]
 
 | Run Accession | Sample Description                |
 |---------------|-----------------------------------|
 | ERR15277390   | HEK293T treated with PBS          |
 | ERR15277391   | HEK293T treated with virus_ref_3  |
+
+### BMDCs and 293T Samples [fastq]
+
+| Sample Description                  | Run Accession | File Name                                                     | Notes                             | Size (bytes)   |
+|--------------------------------------|---------------|----------------------------------------------------------------|------------------------------------|----------------|
+| HEK293T treated with virus_ref_3     | ERR15435818   | PAY43290_combined_Virus_293T.fastq.gz                          | Combined FASTQ                     | 100,889,391,034|
+| HEK293T treated with PBS             | ERR15435817   | PAY39146_combined_PBS_293T.fastq.gz                            | Combined FASTQ                     | 72,064,431,107 |
+| PBS-treated BMDM                     | ERR15435816   | combined_PBS_BMDM.fastq.gz                                     | Combined FASTQ                     | 144,627,113,608|
+| EV-treated BMDM                      | ERR15435815   | combined_EV_BMDM.fastq.gz                                      | Combined FASTQ                     | 62,741,773,191 |
+| Virus-treated BMDM (Virus Ref 1)     | ERR15435814   | combined_Virus_Treated_1_BMDM.fastq.gz                         | Combined FASTQ                     | 145,518,985,365|
+| Virus-treated BMDM (Virus Ref 2)     | ERR15435813   | PAY42928_pass_combined_Virus_Treated_2_BMDM.fastq.gz           | Combined FASTQ                     | 114,042,846,728|
 
 ---
 
