@@ -184,4 +184,4 @@ If you use this repository or data in your work, please cite the originating stu
 
 ---
 
-For questions, contact **Theo Nelson** (thn4005@med.cornell.edu).
+For questions, please contact **Theo Nelson** (thn4005@med.cornell.edu).
