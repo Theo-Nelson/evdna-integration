@@ -27,16 +27,16 @@ This dataset involves multiple experimental conditions across different cell typ
 | ERR15277390   | HEK293T treated with PBS          |
 | ERR15277391   | HEK293T treated with virus_ref_3  |
 
-### BMDCs and 293T Samples [fastq]
+### BMDCs and 293T Samples [bam]
 
-| Sample Description                  | Run Accession | File Name                                                     | Notes                             | Size (bytes)   |
-|--------------------------------------|---------------|----------------------------------------------------------------|------------------------------------|----------------|
-| HEK293T treated with virus_ref_3     | ERR15435818   | PAY43290_combined_Virus_293T.fastq.gz                          | Combined FASTQ                     | 100,889,391,034|
-| HEK293T treated with PBS             | ERR15435817   | PAY39146_combined_PBS_293T.fastq.gz                            | Combined FASTQ                     | 72,064,431,107 |
-| PBS-treated BMDM                     | ERR15435816   | combined_PBS_BMDM.fastq.gz                                     | Combined FASTQ                     | 144,627,113,608|
-| EV-treated BMDM                      | ERR15435815   | combined_EV_BMDM.fastq.gz                                      | Combined FASTQ                     | 62,741,773,191 |
-| Virus-treated BMDM (Virus Ref 1)     | ERR15435814   | combined_Virus_Treated_1_BMDM.fastq.gz                         | Combined FASTQ                     | 145,518,985,365|
-| Virus-treated BMDM (Virus Ref 2)     | ERR15435813   | PAY42928_pass_combined_Virus_Treated_2_BMDM.fastq.gz           | Combined FASTQ                     | 114,042,846,728|
+| Sample Description                  | Run Accession | File Name                                                     | Notes                             | 
+|--------------------------------------|---------------|----------------------------------------------------------------|------------------------------------|
+| HEK293T treated with virus_ref_3     | ERR16121799   | PAY43290_combined_Virus_293T.ubam.bam                          | unaligned bam                     | 
+| HEK293T treated with PBS             | ERR16121798   | PAY39146_combined_PBS_293T.ubam.bam                            | unaligned bam                     | 
+| PBS-treated BMDM                     | ERR16121797   | combined_PBS_BMDM.ubam.bam                                     | unaligned bam                     | 
+| EV-treated BMDM                      | ERR16121796   | combined_EV_BMDM.ubam.bam                                      | unaligned bam                     | 
+| Virus-treated BMDM (Virus Ref 1)     | ERR16121795   | combined_Virus_Treated_1_BMDM.ubam.bam                         | unaligned bam                     | 
+| Virus-treated BMDM (Virus Ref 2)     | ERR16121794   | PAY42928_pass_combined_Virus_Treated_2_BMDM.ubam.bam           | unaligned bam                     | 
 
 ---
 
