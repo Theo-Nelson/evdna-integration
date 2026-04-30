@@ -180,7 +180,7 @@ These are used for targeted alignments and soft-clip mapping.
 
 ## 📚 Citation
 
-If you use this repository or data in your work, please cite the originating study linked to **ERP167546**.
+If you use this repository or data in your work, please cite the originating study linked to **ERP167546**: https://www.sciencedirect.com/science/article/pii/S1535610826001777
 
 ---
 
